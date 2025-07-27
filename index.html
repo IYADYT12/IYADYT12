@@ -11,7 +11,7 @@
       text-align: center;
       color: white;
       padding: 20px;
-      cursor: url('https://cdn.custom-cursor.com/db/15250/32/minecraft-diamond-sword-cursor.png'), auto;
+      cursor: url('https://cur.cursors-4u.net/games/gam-11/gam1003.cur'), auto;
     }
     .banner {
       width: 200px;
@@ -71,6 +71,13 @@
     input[type="submit"]:hover {
       background: #0066cc;
     }
+    .copy-btn {
+      background: #00cc66;
+      margin: 5px;
+    }
+    .copy-btn:hover {
+      background: #00994d;
+    }
   </style>
 </head>
 <body>
@@ -81,38 +88,36 @@
   <p>مرحبًا بك في عالمي! كل شيء هنا يبدأ بالمتعة والأكشن 💥</p>
 
   <a href="https://www.youtube.com/@IYAD__YT_" class="button" target="_blank">📺 اشترك في قناتي</a>
-  <a href="https://www.instagram.com/iyad_yt_1l" class="button" target="_blank">📸 تابعني على إنستقرام</a>
-  <a href="https://discord.gg/jukqxHUy" class="button" target="_blank">💬 انضم إلى منظمة الديسكورد</a>
+  <a href="https://www.instagram.com/iyad_yt_official" class="button" target="_blank">📸 تابعني على إنستقرام</a>
+  <a href="https://discord.gg/YOUR_INVITE" class="button" target="_blank">💬 انضم إلى منظمة الديسكورد</a>
 
   <div class="server-box">
     <h2>🎮 سيرفر ماينكرافت</h2>
-    <p><strong>IP:</strong> wheatcraft1.aternos.me</p>
-    <p><strong>PORT:</strong> 13305</p>
+    <p><strong>IP:</strong> <span id="ip">play.iyadmc.net</span></p>
+    <p><strong>PORT:</strong> <span id="port">19132</span></p>
+    <button class="button copy-btn" onclick="copyText('ip')">📋 نسخ IP</button>
+    <button class="button copy-btn" onclick="copyText('port')">📋 نسخ PORT</button>
   </div>
 
   <h2>📩 انضم الآن!</h2>
-  <form action="mailto:beziouiyed78@gmail.com" method="post" enctype="text/plain">
+  <form action="mailto:YOUR_EMAIL@gmail.com" method="post" enctype="text/plain">
     <input type="text" name="name" placeholder="اسمك"><br>
     <input type="email" name="email" placeholder="بريدك الإلكتروني"><br>
     <input type="submit" value="أرسل الطلب">
   </form>
 
-</body>
-<button onclick="copyIP()" class="button">🎮 نسخ IP & PORT</button>
-<p id="copy-msg" style="color: lightgreen; display: none;">✅ تم النسخ!</p>
-<script>
-  function copyIP() {
-    const ipPort = "play.iyadmc.net:19132";
-    navigator.clipboard.writeText(ipPort).then(() => {
-      document.getElementById("copy-msg").style.display = "block";
-      setTimeout(() => {
-        document.getElementById("copy-msg").style.display = "none";
-      }, 2000);
-    });
-  }
-</script>
+  <script>
+    function copyText(id) {
+      var text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('تم النسخ: ' + text);
+      });
+    }
+  </script>
 
+</body>
 </html>
+
 
   <a href="https://aternos.org/:yourserver" target="_blank" class="button">🎮 ادخل سيرفر ماينكرافت</a>
 
